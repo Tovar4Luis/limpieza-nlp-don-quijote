@@ -2,16 +2,6 @@
 
 Este proyecto aplica al texto de *Don Quijote de la Mancha*, de Miguel de Cervantes, el flujo de normalización y lematización visto en clase.
 
-## Continuación: Checkpoint 2
-
-La carpeta [`checkpoint2/`](checkpoint2/) contiene el clasificador de reseñas de restaurantes del Checkpoint 2. Su `train.py` compara Bag-of-Words (`CountVectorizer`) y TF-IDF (`TfidfVectorizer`), elige el mejor por F1 macro, guarda las métricas y exporta el pipeline que consume su API.
-
-```powershell
-cd checkpoint2
-.\.venv\Scripts\Activate.ps1
-python train.py
-python -m uvicorn app:app --host 127.0.0.1 --port 8000
-```
 ## Archivos
 
 - `don_quijote.txt`: texto plano del libro, procedente del libro electrónico 2000 de Project Gutenberg: https://www.gutenberg.org/ebooks/2000. La obra es de dominio público.
@@ -43,4 +33,3 @@ También se pueden indicar rutas de entrada y salida:
 ```powershell
 python limpieza.py --input don_quijote.txt --output don_quijote_normalizado.txt --comparison comparacion_stemming_lematizacion.csv
 ```
-
