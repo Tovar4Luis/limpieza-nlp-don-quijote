@@ -1,5 +1,5 @@
-﻿.venv/
+.venv/
 __pycache__/
-don_quijote_limpio.txt
-don_quijote_normalizado.txt
+*.pyc
 comparacion_stemming_lematizacion.csv
+don_quijote_limpio.txt
