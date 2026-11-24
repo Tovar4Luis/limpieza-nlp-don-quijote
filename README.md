@@ -7,7 +7,7 @@ Proyecto de procesamiento de *Don Quijote de la Mancha*, de Miguel de Cervantes.
 - `don_quijote.txt`: libro original.
 - `don_quijote_normalizado.txt`: texto tokenizado, en minúsculas, lematizado y filtrado de stop words y signos.
 - `proyecto_nlp.py`: pipeline completo de carga, limpieza, lematización, entrenamiento Word2Vec y gráficas.
-- `espacio_word2vec_skipgram.png` y `espacio_word2vec_cbow.png`: espacios vectoriales 2D comparativos.
+- `espacio_word2vec_skipgram.png` y `espacio_word2vec_cbow.png`: visualizaciones 2D de palabras y sus contextos en ventanas locales y amplias.
 - `requirements.txt`: dependencias congeladas del entorno virtual.
 
 ## Proceso
@@ -17,6 +17,8 @@ Proyecto de procesamiento de *Don Quijote de la Mancha*, de Miguel de Cervantes.
 3. Se guarda el texto procesado en `don_quijote_normalizado.txt`.
 4. Gensim entrena dos modelos Word2Vec sobre las oraciones: Skip-gram (`sg=1`) y CBOW (`sg=0`), con ventana de contexto 5.
 5. Las 60 palabras más frecuentes se proyectan a dos dimensiones con PCA para crear una gráfica por modelo.
+
+Las imágenes incluidas muestran proyecciones distribucionales obtenidas directamente del texto limpio. Al ejecutar el pipeline, se generan de nuevo como proyecciones PCA etiquetadas a partir de los modelos Word2Vec entrenados.
 
 ## Ejecución en PowerShell
 
